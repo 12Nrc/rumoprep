@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Free Consultation | Rumo Prep</title>
+<meta name="description" content="Book a free college admissions consultation with Rumo Prep. Serving families in Washington, DC, Montgomery County, Northern Virginia and online.">
+<meta name="theme-color" content="#14302F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book a Free Consultation | Rumo Prep">
+<meta property="og:description" content="Tell me about your student and I'll reply within two days to set up a call.">
+<meta property="og:image" content="https://rumoprep.com/images/social.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400..800;1,400..700&display=swap">
+<link rel="stylesheet" href="style.css?v=9">
+<script src="main.js?v=2" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Rumo Prep home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><polygon class="needle" points="20,5 24.5,20 15.5,20"/><polygon points="20,35 24.5,20 15.5,20" fill="currentColor" opacity=".35"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/></svg>
+      Rumo Prep
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html" class="btn btn-solid" aria-current="page">Free consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="sec" style="padding-top:clamp(52px,7vw,92px)">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker">Contact</p>
+        <h1 class="page-title" style="font-size:clamp(38px,5vw,60px)">Book a free consultation</h1>
+        <p class="lead" style="margin-top:18px">Tell me a little about your student and I'll reply within two days to set up a call.</p>
+        <ul class="reach">
+          <li><div><b>Email</b><a data-site="email" href="mailto:nrcorrea07@gmail.com">nrcorrea07@gmail.com</a></div><button class="copy" type="button" data-copy="email">Copy</button></li>
+          <li><div><b>Phone or text</b><a data-site="phone" href="tel:+12027930087">202-793-0087</a></div><button class="copy" type="button" data-copy="phone">Copy</button></li>
+          <li><div><b>Serving</b><span>DC, Montgomery County, Northern Virginia and online</span></div></li>
+        </ul>
+        <ol class="next">
+          <li><b>I reply within two days</b> to find a time that works.</li>
+          <li><b>We talk</b> about your student, their goals and where they are in the process.</li>
+          <li><b>I recommend the support that fits</b>, or tell you honestly if I'm not the right fit.</li>
+        </ol>
+      </div>
+
+      <!-- The form sends through Formspree. Add your Formspree code in main.js (formspreeId). -->
+      <form id="contact-form" novalidate>
+        <h2>Tell me about your student</h2>
+        <input type="hidden" name="_subject" value="New consultation request from rumoprep.com">
+        <label class="hp" aria-hidden="true">Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        <label>Parent or guardian name<input name="parent" autocomplete="name" required></label>
+        <label>Student name<input name="student"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+        <label>Student's grade<select name="grade"><option>Sophomore</option><option selected>Junior</option><option>Senior</option><option>Transfer student</option></select></label>
+        <label>High school<input name="school"></label>
+        <label class="full">What kind of help are you looking for?<select name="plan"><option>Not sure yet</option><option>Junior year planning</option><option>Full application support</option><option>Essay review</option></select></label>
+        <label class="full">How did you hear about Rumo Prep?<select name="source"><option>Choose one</option><option>Met you in person</option><option>A friend or family member</option><option>School or PTA</option><option>Community group or place of worship</option><option>Online search</option><option>Social media</option><option>Other</option></select></label>
+        <label class="full">Anything I should know?<textarea name="message" placeholder="Goals, schools on your mind, deadlines, questions"></textarea></label>
+        <div class="full"><button class="btn btn-solid" type="submit">Send request</button></div>
+        <p class="sent" id="form-status" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><polygon class="needle" points="20,5 24.5,20 15.5,20"/><polygon points="20,35 24.5,20 15.5,20" fill="currentColor" opacity=".35"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/></svg>Rumo Prep</a>
+        <p>College admissions coaching for high school juniors and seniors in Washington, DC, Montgomery County and Northern Virginia.</p>
+      </div>
+      <div><h4>Pages</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="about.html">About</a></li><li><a href="articles.html">Articles</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a data-site="email" href="mailto:nrcorrea07@gmail.com">nrcorrea07@gmail.com</a></li><li><a data-site="phone" href="tel:+12027930087">202-793-0087</a></li><li><a href="contact.html">Book a free consultation</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© <span data-year>2026</span> Rumo Prep</span><span>Independent coaching. Not affiliated with any college or university.</span></div>
+  </div>
+</footer>
+</body>
+</html>

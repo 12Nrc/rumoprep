@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumo Prep | College Admissions Coaching in the DC Area</title>
+<meta name="description" content="One-on-one college admissions coaching for high school juniors and seniors in Washington, DC, Montgomery County and Northern Virginia. Free consultations.">
+<meta name="theme-color" content="#14302F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rumo Prep | College Admissions Coaching">
+<meta property="og:description" content="A clear direction through the college application process, for juniors and seniors in the DC area.">
+<meta property="og:image" content="https://rumoprep.com/images/social.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400..800;1,400..700&display=swap">
+<link rel="stylesheet" href="style.css?v=9">
+<script src="main.js?v=2" defer></script>
+<style>
+/* "What your family gets" on white. The two panels are sage so the
+   section doesn't merge into the off-white "Let's talk" section below
+   (its styles are in style.css).
+   To go back to the green band: change class="sec gets-light" to class="sec sage". */
+.sec.gets-light{background:#FFFFFF;border-top:1px solid var(--line)}
+.gets-light .gets-col{background:var(--sage);border-color:transparent}
+.gets-light .chk circle{fill:#FFFFFF}
+/* Dark mode: a pine green band (a little lighter and greener than the page)
+   so the section doesn't blend into the dark teal around it. Panels are one shade darker. */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec.gets-light{background:#17362B;border-top-color:transparent}
+  :root:not([data-theme="light"]) .gets-light .gets-col{background:#0F2321}
+  :root:not([data-theme="light"]) .gets-light .chk circle{fill:#17362B}}
+:root[data-theme="dark"] .sec.gets-light{background:#17362B;border-top-color:transparent}
+:root[data-theme="dark"] .gets-light .gets-col{background:#0F2321}
+:root[data-theme="dark"] .gets-light .chk circle{fill:#17362B}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Rumo Prep home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><polygon class="needle" points="20,5 24.5,20 15.5,20"/><polygon points="20,35 24.5,20 15.5,20" fill="currentColor" opacity=".35"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/></svg>
+      Rumo Prep
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html" class="btn btn-solid">Free consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO PHOTO -->
+  <section class="hero-photo">
+    <img src="images/uva-rotunda-sunset.jpg" alt="The Rotunda and the Lawn at the University of Virginia at sunset, with the Blue Ridge Mountains behind" width="1790" height="1065" fetchpriority="high">
+    <div class="wrap">
+      <h1>A clear direction through the college application process.</h1>
+      <p class="lead">One-on-one coaching for high school juniors and seniors in DC, Montgomery County and Northern Virginia, from the first college list to May 1.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="contact.html">Book a free consultation</a>
+        <a class="more" href="how-it-works.html">How it works <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <span class="caption">The Rotunda, University of Virginia</span>
+  </section>
+
+  <!-- SCHOOL LOGOS -->
+  <section class="logos-band" style="padding-block:clamp(48px,6vw,76px)">
+    <div class="wrap">
+      <p class="intro">At a Bay Area counseling firm, I built an application tool. Students who used it were admitted to schools including:</p>
+      <ul class="logos">
+        <li><img src="images/logos/harvard.png" alt="Harvard University" width="318" height="310" loading="lazy"></li>
+        <li><img src="images/logos/mit.png" class="wide" alt="MIT" width="198" height="106" loading="lazy"></li>
+        <li><img src="images/logos/stanford.png" alt="Stanford University" width="186" height="282" loading="lazy"></li>
+        <li><img src="images/logos/yale.png" alt="Yale University" width="298" height="292" loading="lazy"></li>
+        <li><img src="images/logos/columbia.png" alt="Columbia University" width="360" height="313" loading="lazy"></li>
+        <li><img src="images/logos/penn.png" alt="University of Pennsylvania" width="263" height="300" loading="lazy"></li>
+        <li><img src="images/logos/ucla.png" alt="UCLA" width="296" height="297" loading="lazy"></li>
+        <li><img src="images/logos/michigan.png" alt="University of Michigan" width="360" height="259" loading="lazy"></li>
+        <li><img src="images/logos/carnegie-mellon.png" alt="Carnegie Mellon University" width="225" height="225" loading="lazy"></li>
+        <li><img src="images/logos/nyu.png" alt="New York University" width="249" height="360" loading="lazy"></li>
+        <li><img src="images/logos/northeastern.png" alt="Northeastern University" width="360" height="360" loading="lazy"></li>
+      </ul>
+      <p class="fine">Logos belong to their schools and are shown for reference only. Rumo Prep is independent and not affiliated with or endorsed by any of these institutions. Admission results belong to the students who earned them.</p>
+    </div>
+  </section>
+
+  <!-- WHAT WE WORK ON
+       A roadmap from the college list to decision day. main.js draws the road and
+       plays the animation when the section scrolls into view. Without it, the six
+       stops still show as a normal list. To edit a stop, change its text below. -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="map-head">
+        <div>
+          <p class="kicker">What we work on</p>
+          <h2>Everything from the college list to decision day</h2>
+        </div>
+        <p class="muted">Your student writes every word. I help them figure out what to say, build a smart list and keep every deadline on track, with you copied on everything.</p>
+      </div>
+
+      <div class="roadmap-wrap">
+        <svg class="road" aria-hidden="true">
+          <path class="road-base"/>
+          <path class="road-dash"/>
+          <path class="road-trail"/>
+          <g class="road-end"><line x1="0" y1="0" x2="0" y2="-36"/><path d="M0 -36 L24 -29.5 L0 -23 Z"/><circle r="5"/></g>
+          <text class="road-label road-start-label">Junior year</text>
+          <text class="road-label road-end-label">May 1</text>
+        </svg>
+        <ol class="roadmap">
+          <li class="rm-stop">
+            <span class="rm-pin">1</span>
+            <svg class="art" viewBox="0 0 120 120" aria-hidden="true">
+              <path class="disc" d="M62 7 C92 5 114 27 112 58 C110 90 90 114 58 112 C27 110 6 89 8 57 C10 28 33 9 62 7 Z"/>
+              <path class="a o" d="M38 26 L94 36 L38 46 Z"/>
+              <path class="k o" d="M38 52 L82 59 L38 66 Z"/>
+              <path class="w o" d="M38 72 L70 78 L38 84 Z"/>
+              <path class="lw" d="M47 30 V42"/>
+              <line class="li" x1="38" y1="20" x2="38" y2="102" style="stroke-width:3.2"/>
+              <circle class="a o" cx="38" cy="18" r="4.5"/>
+              <path class="k" d="M28 101 h20 a3 3 0 0 1 3 3 v1 h-26 v-1 a3 3 0 0 1 3 -3 z"/>
+            </svg>
+            <p class="rm-when">Spring of junior year</p>
+            <h3>College list</h3>
+            <p>A balanced mix of reach, target and likely schools that actually fit your student.</p>
+          </li>
+          <li class="rm-stop">
+            <span class="rm-pin">2</span>
+            <svg class="art" viewBox="0 0 120 120" aria-hidden="true">
+              <path class="disc" d="M58 6 C90 4 113 28 113 60 C113 92 88 113 57 112 C26 111 6 88 7 58 C8 27 29 8 58 6 Z"/>
+              <path class="k o" d="M50 64 L41 104 L51 98 L58 106 L62 68 Z"/>
+              <path class="t o" d="M70 64 L79 104 L69 98 L62 106 L58 68 Z"/>
+              <g class="a o">
+                <circle cx="60" cy="25" r="9"/><circle cx="74" cy="29" r="9"/><circle cx="83" cy="41" r="9"/><circle cx="83" cy="55" r="9"/>
+                <circle cx="74" cy="67" r="9"/><circle cx="60" cy="71" r="9"/><circle cx="46" cy="67" r="9"/><circle cx="37" cy="55" r="9"/>
+                <circle cx="37" cy="41" r="9"/><circle cx="46" cy="29" r="9"/>
+              </g>
+              <circle class="a" cx="60" cy="48" r="20"/>
+              <circle class="w o" cx="60" cy="48" r="16"/>
+              <path class="k" d="M60 38.5 l2.9 6 6.5 .9 -4.7 4.6 1.1 6.5 -5.8 -3.1 -5.8 3.1 1.1 -6.5 -4.7 -4.6 6.5 -.9 z"/>
+            </svg>
+            <p class="rm-when">Spring and summer</p>
+            <h3>Activities</h3>
+            <p>Framing what your student has done, and choosing what comes next.</p>
+          </li>
+          <li class="rm-stop">
+            <span class="rm-pin">3</span>
+            <svg class="art" viewBox="0 0 120 120" aria-hidden="true">
+              <path class="disc" d="M60 8 C91 7 113 30 112 61 C111 92 88 113 58 112 C28 111 7 90 8 59 C9 29 30 9 60 8 Z"/>
+              <g transform="rotate(-7 54 60)">
+                <rect class="m" x="30" y="26" width="56" height="76" rx="4"/>
+                <rect class="w o" x="26" y="22" width="56" height="76" rx="4"/>
+                <path class="ln" d="M35 36 H72 M35 46 H68 M35 56 H72 M35 66 H58"/>
+                <path class="la" d="M35 82 c4 -7 8 7 12 0 s8 7 12 0 s6 5 9 1"/>
+              </g>
+              <g transform="translate(76 87) rotate(28)">
+                <rect class="a o" x="-6.5" y="-66" width="13" height="50" rx="3"/>
+                <rect class="k" x="-6.5" y="-66" width="13" height="13" rx="3"/>
+                <path class="w o" d="M-6.5 -16 H6.5 L0 0 Z"/>
+                <circle class="k" cx="0" cy="-8" r="1.8"/>
+              </g>
+            </svg>
+            <p class="rm-when">Summer, done by Aug 31</p>
+            <h3>Personal statement</h3>
+            <p>From the first idea to a polished final draft, in your student's own voice.</p>
+          </li>
+          <li class="rm-stop">
+            <span class="rm-pin">4</span>
+            <svg class="art" viewBox="0 0 120 120" aria-hidden="true">
+              <path class="disc" d="M61 6 C93 7 114 31 112 62 C110 92 86 114 56 112 C26 110 6 87 8 57 C10 27 31 5 61 6 Z"/>
+              <g transform="rotate(-18 60 104)"><rect class="m o" x="38" y="34" width="44" height="58" rx="4"/></g>
+              <g transform="rotate(16 60 104)"><rect class="a o" x="38" y="34" width="44" height="58" rx="4"/></g>
+              <rect class="a o" x="52" y="23" width="15" height="10" rx="2.5"/>
+              <rect class="w o" x="38" y="30" width="44" height="62" rx="4"/>
+              <path class="ln" d="M46 46 H74 M46 55 H70 M46 64 H74 M46 73 H62"/>
+            </svg>
+            <p class="rm-when">Fall</p>
+            <h3>Supplemental essays</h3>
+            <p>Written for each school, never copied and pasted.</p>
+          </li>
+          <li class="rm-stop">
+            <span class="rm-pin">5</span>
+            <svg class="art" viewBox="0 0 120 120" aria-hidden="true">
+              <path class="disc" d="M59 7 C90 6 112 28 112 59 C112 91 89 113 59 112 C28 111 7 89 8 59 C9 28 29 8 59 7 Z"/>
+              <rect class="m" x="28" y="34" width="72" height="68" rx="7"/>
+              <rect class="w o" x="24" y="30" width="72" height="68" rx="7"/>
+              <path class="a o" d="M24 48 V37 a7 7 0 0 1 7 -7 H89 a7 7 0 0 1 7 7 V48 Z"/>
+              <rect class="k" x="38" y="21" width="7" height="17" rx="3.5"/>
+              <rect class="k" x="75" y="21" width="7" height="17" rx="3.5"/>
+              <g class="m">
+                <rect x="34" y="56" width="8" height="8" rx="2"/><rect x="48" y="56" width="8" height="8" rx="2"/><rect x="62" y="56" width="8" height="8" rx="2"/><rect x="76" y="56" width="8" height="8" rx="2"/>
+                <rect x="34" y="70" width="8" height="8" rx="2"/><rect x="48" y="70" width="8" height="8" rx="2"/><rect x="76" y="70" width="8" height="8" rx="2"/>
+                <rect x="34" y="84" width="8" height="8" rx="2"/><rect x="48" y="84" width="8" height="8" rx="2"/><rect x="62" y="84" width="8" height="8" rx="2"/>
+              </g>
+              <rect class="k" x="62" y="70" width="8" height="8" rx="2"/>
+              <ellipse class="la" cx="66.5" cy="74" rx="11" ry="9" transform="rotate(-12 66.5 74)" style="stroke-width:3.2"/>
+            </svg>
+            <p class="rm-when">Fall to winter</p>
+            <h3>Deadlines and applications</h3>
+            <p>Early decision, early action and regular plans, with every date tracked.</p>
+          </li>
+          <li class="rm-stop">
+            <span class="rm-pin">6</span>
+            <svg class="art" viewBox="0 0 120 120" aria-hidden="true">
+              <path class="disc" d="M60 6 C92 6 113 29 112 60 C111 91 89 113 59 112 C28 111 7 90 8 59 C9 28 29 6 60 6 Z"/>
+              <rect class="t o" x="22" y="54" width="76" height="46" rx="4"/>
+              <rect class="w o" x="32" y="24" width="56" height="54" rx="3"/>
+              <circle class="a o" cx="60" cy="40" r="8"/>
+              <path class="lw" d="M56 40 l3 3 5 -6"/>
+              <path class="ln" d="M42 56 H78 M46 64 H74"/>
+              <path class="w o" d="M22 62 L60 84 L98 62 V96 a4 4 0 0 1 -4 4 H26 a4 4 0 0 1 -4 -4 Z"/>
+              <path class="li" d="M23 99 L52 80 M97 99 L68 80" style="stroke-width:2"/>
+              <g class="a"><rect x="18" y="30" width="7" height="3" rx="1.5" transform="rotate(-30 21 31)"/><rect x="96" y="26" width="7" height="3" rx="1.5" transform="rotate(25 99 27)"/></g>
+              <g class="k"><rect x="98" y="42" width="6" height="3" rx="1.5" transform="rotate(-20 101 43)"/><circle cx="24" cy="46" r="2"/></g>
+            </svg>
+            <p class="rm-when">Winter to May 1</p>
+            <h3>Interviews and decisions</h3>
+            <p>Interview prep, comparing offers and choosing a school by May 1.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- DMV PHOTO BAND -->
+  <section class="photo-band">
+    <img src="images/capitol.jpg" alt="The U.S. Capitol at sunset" width="1067" height="600" loading="lazy">
+    <div class="wrap">
+      <h2>Based in the DMV</h2>
+      <p>I grew up in Washington, DC. Most meetings happen online so they fit around school and activities, and I meet families in person around the area over school breaks.</p>
+      <div class="places"><span>Washington, DC</span><span>Montgomery County</span><span>Northern Virginia</span></div>
+    </div>
+    <span class="caption">U.S. Capitol, Washington, DC</span>
+  </section>
+
+  <!-- YOUR COACH
+       Add your photo as images/headshot.jpg and it appears beside this text. -->
+  <section class="sec">
+    <div class="wrap coach">
+      <figure><img src="images/headshot.jpg?v=2" alt="Nickolas Correa" onerror="this.closest('.coach').classList.add('no-photo');this.parentNode.remove()"></figure>
+      <div class="text">
+        <p class="kicker">Your coach</p>
+        <h2>Hi, I'm Nickolas.</h2>
+        <p>I started Rumo Prep because I know how much the right guidance changes this process. I went through admissions recently myself, including transferring into UVA, and I've worked at an educational counseling firm in the Bay Area.</p>
+        <p>I know what admissions readers respond to now, and students tend to open up to someone closer to their own age. Parents get someone organized and honest who keeps them in the loop.</p>
+        <div class="sign"><b>Nickolas Correa</b><span>Founder, Rumo Prep · University of Virginia, Economics and Applied Statistics</span></div>
+        <p style="margin-top:22px"><a class="more" href="about.html">More about me <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS
+       Hidden until you have real quotes. To show it: delete the word
+       "hidden" below and replace each bracketed line with the person's
+       exact words (with their permission to share). -->
+  <section class="sec" hidden>
+    <div class="wrap">
+      <p class="kicker">Recommendations</p>
+      <h2>What people say</h2>
+      <div class="quotes">
+        <blockquote>[Exact words from a professor or supervisor]<cite>[Name, title]</cite></blockquote>
+        <blockquote>[Exact words from a parent]<cite>[Name, town]</cite></blockquote>
+        <blockquote>[Exact words from a student]<cite>[Name, school]</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section style="padding-block:8px 64px">
+    <div class="wrap">
+      <div class="strip" style="border-top:0">
+        <p>The college admissions process is changing. Here's what parents should know.</p>
+        <a class="btn btn-line" href="articles.html">Read the free guides</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOUR FAMILY GETS
+       Two short lists: what the student gets and what parents get.
+       The check marks draw in when the section scrolls into view (main.js). -->
+  <section class="sec gets-light">
+    <div class="wrap">
+      <div class="map-head">
+        <div>
+          <p class="kicker">What your family gets</p>
+          <h2>One person in your corner for the whole process</h2>
+        </div>
+        <p class="muted">Whichever kind of support your student needs, here's what comes with it.</p>
+      </div>
+
+      <div class="gets">
+        <div class="gets-col">
+          <h3 class="gets-title">For your student</h3>
+          <ul>
+            <li style="--d:0ms"><svg class="chk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M9 16.5 C10.8 18.2 12.4 19.9 14 21.8 C16.9 17.6 19.9 13.6 23.5 10"/></svg>
+              <div><b>One-on-one meetings</b><span>On video, scheduled around school and activities, and in person over breaks.</span></div></li>
+            <li style="--d:160ms"><svg class="chk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M9 16.5 C10.8 18.2 12.4 19.9 14 21.8 C16.9 17.6 19.9 13.6 23.5 10"/></svg>
+              <div><b>Essay feedback within 72 hours</b><span>Detailed comments right in Google Docs, so drafts keep moving.</span></div></li>
+            <li style="--d:320ms"><svg class="chk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M9 16.5 C10.8 18.2 12.4 19.9 14 21.8 C16.9 17.6 19.9 13.6 23.5 10"/></svg>
+              <div><b>A coach who's been through it</b><span>Someone who went through admissions recently and knows what works now.</span></div></li>
+          </ul>
+        </div>
+        <div class="gets-col">
+          <h3 class="gets-title">For you</h3>
+          <ul>
+            <li style="--d:80ms"><svg class="chk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M9 16.5 C10.8 18.2 12.4 19.9 14 21.8 C16.9 17.6 19.9 13.6 23.5 10"/></svg>
+              <div><b>A plan and a calendar</b><span>Every deadline for every school, mapped out in the first month.</span></div></li>
+            <li style="--d:240ms"><svg class="chk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M9 16.5 C10.8 18.2 12.4 19.9 14 21.8 C16.9 17.6 19.9 13.6 23.5 10"/></svg>
+              <div><b>Updates without chasing</b><span>You're copied on every message and join the kickoff and check-ins.</span></div></li>
+            <li style="--d:400ms"><svg class="chk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M9 16.5 C10.8 18.2 12.4 19.9 14 21.8 C16.9 17.6 19.9 13.6 23.5 10"/></svg>
+              <div><b>Honest advice</b><span>A clear read on where your student stands. No ghostwriting, no guarantees.</span></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top:36px"><a class="more" href="how-it-works.html">See how it works <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta cta-light sec">
+    <div class="wrap">
+      <div>
+        <h2>Let's talk about your student</h2>
+        <p>It starts with a free consultation. We'll talk about your student's goals and timeline, and I'll recommend the support that fits. No cost and no pressure.</p>
+        <p class="reach-line"><a data-site="phone" href="tel:+12027930087">202-793-0087</a> · <a data-site="email" href="mailto:nrcorrea07@gmail.com">nrcorrea07@gmail.com</a></p>
+      </div>
+      <a class="btn btn-solid" href="contact.html">Book a free consultation</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><polygon class="needle" points="20,5 24.5,20 15.5,20"/><polygon points="20,35 24.5,20 15.5,20" fill="currentColor" opacity=".35"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/></svg>Rumo Prep</a>
+        <p>College admissions coaching for high school juniors and seniors in Washington, DC, Montgomery County and Northern Virginia.</p>
+      </div>
+      <div><h4>Pages</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="about.html">About</a></li><li><a href="articles.html">Articles</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a data-site="email" href="mailto:nrcorrea07@gmail.com">nrcorrea07@gmail.com</a></li><li><a data-site="phone" href="tel:+12027930087">202-793-0087</a></li><li><a href="contact.html">Book a free consultation</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© <span data-year>2026</span> Rumo Prep</span><span>Independent coaching. Not affiliated with any college or university.</span></div>
+  </div>
+</footer>
+</body>
+</html>
