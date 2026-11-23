@@ -32,6 +32,10 @@
 :root[data-theme="dark"] .sec.gets-light{background:#17362B;border-top-color:transparent}
 :root[data-theme="dark"] .gets-light .gets-col{background:#0F2321}
 :root[data-theme="dark"] .gets-light .chk circle{fill:#17362B}
+/* Hero background video (drone footage). The poster image shows while it loads,
+   when autoplay is blocked, and for visitors who turn on "reduce motion".
+   object-position (85%) keeps the tower in view on phones, where only the middle-right of the frame shows. */
+.hero-photo>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:85% 50%}
 </style>
 </head>
 <body>
@@ -54,9 +58,23 @@
 </header>
 
 <main id="main">
-  <!-- HERO PHOTO -->
+  <!-- HERO VIDEO: silent drone footage of a university campus (Pexels, free to use), looping.
+       Phones get the 720p file, larger screens the 1080p file.
+       To go back to the UVA photo, replace the <video> and <script> below with:
+       <img src="images/uva-rotunda-sunset.jpg" alt="The Rotunda and the Lawn at the University of Virginia at sunset, with the Blue Ridge Mountains behind" width="1790" height="1065" fetchpriority="high">
+       and add back <span class="caption">The Rotunda, University of Virginia</span> at the end of this section. -->
   <section class="hero-photo">
-    <img src="images/uva-rotunda-sunset.jpg" alt="The Rotunda and the Lawn at the University of Virginia at sunset, with the Blue Ridge Mountains behind" width="1790" height="1065" fetchpriority="high">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/hero-campus-poster.jpg" aria-hidden="true">
+      <source src="videos/hero-campus-720.mp4" type="video/mp4" media="(max-width: 760px)">
+      <source src="videos/hero-campus-1080.mp4" type="video/mp4">
+    </video>
+    <script>
+      // Respect "reduce motion": keep the still poster frame instead of playing the video.
+      (function () {
+        var v = document.querySelector(".hero-video");
+        if (v && window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); }
+      })();
+    </script>
     <div class="wrap">
       <h1>A clear direction through the college application process.</h1>
       <p class="lead">One-on-one coaching for high school juniors and seniors in DC, Montgomery County and Northern Virginia, from the first college list to May 1.</p>
@@ -65,7 +83,6 @@
         <a class="more" href="how-it-works.html">How it works <svg class="icon"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
-    <span class="caption">The Rotunda, University of Virginia</span>
   </section>
 
   <!-- SCHOOL LOGOS -->
